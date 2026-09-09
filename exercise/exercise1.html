@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even of odd </title>
+</head>
+<body>
+    <h1>Check if the number given is even or odd</h1>
+    <form id="number">
+    <label for="number-input">Enter a number:</label>
+    <input type ="number" id="number-input" placeholder="enter number"><br>
+    <button type ="submit">submit
+    </button>
+    </form>
+    <script>
+         let form = document.getElementById("number");
+
+    let numberInput = document.getElementById("number-input");
+    form.addEventListener("submit",function(event) {
+    event.preventDefault();
+
+     let number= Number(numberInput.value)
+
+    if (number === 0){
+    alert("enter a greater number");}
+ 
+ else if(number%2== 0 ){
+  alert("The number is even");}
+ else { 
+    alert("The number is odd");}
+  
+    });
+</script>
+    
+</body>
+</html>
