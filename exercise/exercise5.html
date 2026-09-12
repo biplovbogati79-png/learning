@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade calculator</title>
+</head>
+<body>
+    <form id ="number">
+   <label for="mathInput">math mark:</label>
+   <input type="number" id="mathInput"><br>
+   <label for="englishInput">english mark:</label>
+   <input type="number" id="englishInput"><br>
+   <label for="scienceInput">science mark:</label>
+   <input type="number" id="scienceInput"><br>
+   <label for="nepaliInput">nepali mark:</label>
+   <input type="number" id="nepaliInput"><br>
+   <button type="submit" >submit</button><br>
+   <p id="totalOutput"></p>
+   <p id="percentOutput"></p>
+   </form>
+   <script>
+    const form=document.getElementById("number");
+    const  math=document.getElementById("mathInput");
+    const english=document.getElementById("englishInput");
+    const science=document.getElementById("scienceInput");
+    const nepali=document.getElementById("nepaliInput");
+    const total=document.getElementById("totalOutput");
+    const percent=document.getElementById("percentOutput");
+form.addEventListener("submit", function(event){
+event.preventDefault()
+const math1=Number(math.value)
+const english1=Number(english.value)
+const science1=Number(science.value)
+const nepali1=Number(nepali.value)
+const totalmark1= math1 + science1 +english1 + nepali1;
+const percent1= (totalmark1/400)*100;
+total.innerHTML= 
+ "The totalmark is"   + "\n"+ totalmark1 +"<br>";
+ percent.innerHTML =
+ "The percentage is"   + "\n" +percent1+"%";
+
+});
+   </script>
+</body>
+</html>
