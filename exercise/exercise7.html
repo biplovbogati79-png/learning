@@ -6,11 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form id="name">
         <label for="string">enter word:</label>
         <input tpye="name" id ="string">
         <br>
                 <button type="submit">submit</button>
+                <p id="rev"></p>
     </form>
+    <script>
+        const form=document.getElementById("name");
+        const word1=document.getElementById("string");
+        const reverse=document.getElementById("rev");
+         form.addEventListener("submit",function(event){
+            event.preventDefault();
+            const word2 =word1.value
+            reverse.innerHTML="";
+            for (let i = word2.length - 1; i >= 0; i--) {
+    reverse+=reverse+ word2[i];
+    reverse.innerHTML= "reverse"}
+
+
+
+         });
+
+    </script>
 </body>
 </html>
